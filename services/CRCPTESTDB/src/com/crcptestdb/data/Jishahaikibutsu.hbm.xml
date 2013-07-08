@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.crcptestdb.data.Jishahaikibutsu" table="JISHAHAIKIBUTSU" dynamic-insert="false" dynamic-update="false">
+        <id name="jishahaikibutsuCd" type="string">
+            <column name="JISHAHAIKIBUTSU_CD" length="9"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="jishahaikibutsuName" type="string">
+            <column name="JISHAHAIKIBUTSU_NAME" length="100" not-null="true"/>
+        </property>
+        <property name="jishahaikiCategory" type="string">
+            <column name="JISHAHAIKI_CATEGORY" length="10" not-null="true"/>
+        </property>
+        <property name="jwnHaikibutsuName" type="string">
+            <column name="JWN_HAIKIBUTSU_NAME" length="100" not-null="true"/>
+        </property>
+        <property name="tokkanbutsuFlag" type="string">
+            <column name="TOKKANBUTSU_FLAG" length="1" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
